@@ -1,4 +1,6 @@
-﻿namespace AS2425._3F.INF.Prof.FattorialePrimo
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace AS2425._3F.INF.Prof.FattorialePrimo
 {
     internal class Program
     {
@@ -82,11 +84,22 @@
 
         /// <summary>
         /// Verifica se numero è primo
+        ///    If the number is less than 2, it's not prime.
+        ///    Loop from 2 to the square root of the number. For each value in this range, check if it 
+        ///    divides the number evenly(remainder zero). If it does, the number is not prime.
+        ///    If no divisors are found, the number is prime.
         /// </summary>
         /// <returns>True se primo</returns>
         static bool IsPrimo(int numero)
         {
-            return false;
+            if (numero <= 1) return false;
+
+            for (int i = 2; i <= Math.Sqrt(numero); i += 2)
+            {
+                if (numero % i == 0) return false;
+            }
+
+            return true;
         }
     }
 }
