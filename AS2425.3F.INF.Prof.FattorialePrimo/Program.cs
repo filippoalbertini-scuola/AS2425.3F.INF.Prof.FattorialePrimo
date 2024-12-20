@@ -84,10 +84,13 @@ namespace AS2425._3F.INF.Prof.FattorialePrimo
 
         /// <summary>
         /// Verifica se numero è primo
-        ///    If the number is less than 2, it's not prime.
-        ///    Loop from 2 to the square root of the number. For each value in this range, check if it 
-        ///    divides the number evenly(remainder zero). If it does, the number is not prime.
-        ///    If no divisors are found, the number is prime.
+        ///     If the number is less than 2, it's not prime.
+        ///     Loop from 2 to the square root of the number. For each value in this range, check if it 
+        ///     divides the number evenly(remainder zero). If it does, the number is not prime.
+        ///     If no divisors are found, the number is prime.
+        ///    
+        ///     In C#, you use the % sign to check the remainder. If number % divisor == 0, then the number 
+        ///     is divisible by the divisor.
         /// </summary>
         /// <returns>True se primo</returns>
         static bool IsPrimo(int numero)
