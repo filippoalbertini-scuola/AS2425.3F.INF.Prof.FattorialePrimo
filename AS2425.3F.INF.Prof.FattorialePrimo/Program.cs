@@ -8,7 +8,6 @@
 
             int scelta = 0;
             int numero = 0;
-            int risultato = 0;
 
             do
             {
@@ -22,7 +21,7 @@
 
                         numero = Convert.ToInt32(Console.ReadLine());
 
-                        risultato = Fattoriale(numero);
+                        int risultato = Fattoriale(numero);
 
                         Console.WriteLine($"Il fattoriale di {numero} è {risultato}");
                         
@@ -73,7 +72,12 @@
         /// <returns></returns>
         static int Fattoriale(int numero)
         {
-            return 0;
+            int risultato = 1;
+            for (int i = 2; i <= numero; i++)
+            {
+                risultato *= i;
+            }
+            return risultato;
         }
 
         /// <summary>
